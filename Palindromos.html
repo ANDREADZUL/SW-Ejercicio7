@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>
+<link rel="icon" type="imagen/png" href="logo.png"/>
+
+    <script>
+        //funcion para verificar si la palabra que introducimos es un Palíndromo o no
+            function iniciar(){
+            cadena = "";
+            var valor = document.getElementById("palabra").value;
+            alert('La cadena capturada es: '+valor)
+            cadena2 = valor.length;
+            for(var i=cadena2; i>=0; i--){          
+                cadena = cadena + valor.charAt(i);
+            }
+    
+             if(valor == cadena){           //Este ciclo es  para saber si la palabra palíndromo o no
+                alert(valor+ " es palindromo ");
+              }
+              else{
+                alert(valor+ " no es palindromo ");
+               }
+            }
+        
+             
+
+</script>
+</head>
+<body >
+    <form  name="Palindromo" method="GET">
+        <label>Deme una palabra:</label>
+        <input type="text"  id="palabra" placeholder="Solo Letras">
+        <input type="submit" value="Verificar" onclick="iniciar();">
+    </form>
+    
+</body>
+</html>
